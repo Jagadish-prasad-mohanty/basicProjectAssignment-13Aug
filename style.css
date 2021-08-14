@@ -9,6 +9,15 @@ html{
 body{
     background-color: rgb(252, 216, 222);
 }
+
+/* classes */
+.bold{
+    font-weight: bold;
+}
+.zindex100{
+    z-index: 100;
+}
+
 /* Navbar  */
 .nav{
     
@@ -16,15 +25,9 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 1;
 }
 .navbar{
     background-color: rgba(255, 72, 16, 0.699);
-    z-index: 10;
-    
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     /* background-blend-mode: multiply; */
     color:white;
     /* background-color: orange; */
@@ -40,22 +43,18 @@ body{
     font-size: 1.5rem;
     background-color: white;
     color: rgb(247, 89, 16);
-    z-index: 100;
 }
 .navbar-desc{
     font-weight: 100;
     font-size: 1rem;
-    z-index: 100;
 }
 .navbar-image{
     width: 55%;
     height: 50%;
-    z-index: 100;
 }
 .navbar-image img{
     width: 100%;
     height: 100%;
-    z-index: 100;
 }
 .navbar-content{
     margin-top: 2.5rem;
@@ -65,7 +64,6 @@ body{
     align-items: center;    
     gap: 0.5rem;
     flex-flow: column;
-    z-index: 100;
     /* border: 1px solid pink; */
 }
 .navbar-buttons{
@@ -73,15 +71,17 @@ body{
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    z-index: 100;;
 
 }
 .navbar-button{
     padding:  0.3rem 3rem;
     border: 1px solid white;
     border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4px;
     cursor: pointer;
-    z-index: inherit;
 }
 
 .navbar-button:hover{
@@ -120,24 +120,31 @@ body{
     margin: 1.2rem 0.5rem;
 }
 
-.card::before{
+.card .icon{
     position: absolute;
-    content: 'we';
     color: white;
     top:-15px;
-    left: 42%;
+    left: 50%;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    transform: translateX(-50%);
     padding: 0.5rem;
     border-radius: 10rem;
     background-color: rgb(255, 115, 0);
 }
 
 /* feed */
-.feed{
-    background: url('./image/bg-feature-section.jpg') rgb(255,69,0);
+.feed-bg{
+    background: url('./image/bg-feature-section.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: multiply;
+}
+.feed{
+    background:rgba(255, 72, 16, 0.699) ;
+
+    /* background-blend-mode: multiply; */
     padding: 0.5rem;
     color:white;
     text-align: center;
@@ -175,7 +182,11 @@ body{
     border-radius: 10rem;
     border: 1px solid white;
 }
-.feed11-heading h2{
+.feed11-heading .icon{
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    line-height: 22px;
     border: 1px solid white;
     padding: 0.3rem;
     border-radius: 10rem;
@@ -247,12 +258,17 @@ body{
 .pop p{
     font-size: 0.8rem;
 }
-.pop::before{
+.pop .icon{
     position: absolute;
     content: 'we';
     color: white;
+    height:32px;
+    width: 32px;
+    text-align: center;
+    padding: 4px;
     top:86%;
-    left: 42%;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 0.5rem;
     border-radius: 10rem;
     background-color: rgb(255, 115, 0);
@@ -408,9 +424,7 @@ body{
     top: 22px;
     left: -150px;
 }
-.bold{
-    font-weight: bold;
-}
+
 .center-line .scroll-icon{
     bottom: 0px;
     left: 50%;
@@ -443,7 +457,65 @@ body{
 
 /* media query */
 @media (max-width :991px){
-    .feed2{
+    .feed2,.features-img{
         display: none;
     }
+    .event1 .event-content .icon{
+        right: -85px;
+    }
+    .event2 .event-content .icon{
+        left: -85px;
+
+    }
+    .event1 .event-content  .icon-details{
+        right: -135px;
+    }
+    .event2 .event-content  .icon-details{
+        left: -135px;
+    }
+    
+}
+@media (max-width :600px){
+    .navbar-heading{
+        font-size: 1rem;
+    }
+    .navbar-buttons{
+        gap: 0.5rem;
+    }
+    .navbar-button{
+        padding:0.2rem 1rem;
+    }
+    .feed-content{
+        flex-flow: column;
+    }
+    .event1 .event-content .icon{
+        right: -65px;
+    }
+    .event2 .event-content .icon{
+        left: -65px;
+
+    }
+    .event1 .event-content  .icon-details{
+        right: -115px;
+    }
+    .event2 .event-content  .icon-details{
+        left: -115px;
+    }
+
+}
+@media (max-width :450px){
+    .event1 .event-content .icon{
+        display: none;
+    }
+    .event2 .event-content .icon{
+        display: none;
+
+    }
+    .event1 .event-content  .icon-details{
+        right: -95px;
+    }
+    .event2 .event-content  .icon-details{
+        left: -95px;
+    }
+
 }
