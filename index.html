@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/353131f6ae.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div>
         <!-- navbar -->
-        <div class="navbar">
-            <div class="navbar-content">
-                <p class="navbar-desc">We're happy to tell you about our new app</p>
-                <!-- <div class="navbar-heading"><div>AN AWESOME APP</div></div> -->
-                <h3 class="navbar-heading">AN AWESOME APP</h3>
-                <div class="navbar-buttons">
-                    <p class="navbar-button">apple</p>
-                    <p class="navbar-button">android</p>
+        <header class="nav">
+            <div class="navbar">
+                <div class="navbar-content">
+                    <p class="navbar-desc">We're happy to tell you about our new app</p>
+                    <!-- <div class="navbar-heading"><div>AN AWESOME APP</div></div> -->
+                    <h3 class="navbar-heading">AN AWESOME APP</h3>
+                    <div class="navbar-buttons">
+                        <p class="navbar-button">apple</p>
+                        <p class="navbar-button">android</p>
+                    </div>
+                </div>
+                <div class="navbar-image">
+                    <img src="./image/navbar_image.png"/>
                 </div>
             </div>
-            <div class="navbar-image">
-                <img src="./image/navbar_image.png"/>
-            </div>
-        </div>
+        </header>
         <!-- cards -->
-        <div class="cards">
+        <section class="cards">
             <div class="card">
                 <h3>UNIQUE DESIGN</h3>
                 <p>Lorem ipsum dolor sit lorem, ipsum.</p>
@@ -42,9 +45,9 @@
                 <h3>UNIQUE DESIGN</h3>
                 <p>Lorem ipsum dolor sit lorem, ipsum.</p>
             </div>
-        </div>
+        </section>
         <!-- feed -->
-        <div class="feed">
+        <section class="feed">
             <div class="feed-content">
             <div class="feed1">
                 <div class="feed11">
@@ -97,9 +100,9 @@
                 </div>
             </div>
             </div>
-        </div>
+        </section>
         <!-- pops -->
-        <div class="stats">
+        <section class="stats">
         <h3 class="stats-heading">
             Some <span>Facts</span>
         </h3>
@@ -130,7 +133,93 @@
             </div>
         </div>
         </div>
-        </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <h2 class="features-heading">Features</h2>
+            <div class="features-content">
+                <div class="features-img">
+                    <img  src="./image/feature.png"/>
+                </div>
+                <div class="features-details">
+                    <p class="features-details1"><strong>Why</strong> Choose Avante</p>
+                    <div class="features-details2">
+                        <p id="features-details21">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <p id="features-details22">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam quas eligendi possimus sequi debitis omnis molestias nesciunt quam laborum facere Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="features-details3">
+                        <details class="features-details31">
+                            <summary>Epcot Center Lorem, ipsum.</summary>
+                            <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                          </details>
+                          <details class="features-details31">
+                            <summary>Epcot Center Lorem, ipsum.</summary>
+                            <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                          </details>
+                          <details class="features-details31">
+                            <summary>Epcot Center Lorem, ipsum.</summary>
+                            <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                          </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr/>
+        <!-- Event calender -->
+        <section class="calender">
+            <h2 class="calender-heading">Event Calender</h2>
+            <div class="center-line">
+                <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
+            </div>
+            <div class="event event1">
+                <div class="event-content">
+                    <i class="icon fas fa-paint-brush"></i>
+                    <div class="icon-details">
+                        <p class="bold">Listopad</p>
+                        <p>2018</p>
+                    </div>
+                    <p class="event-content1">Lorem ipsum dolor sit.</p>
+                    <p class="event-content2">Lorem ipsum dolor sit amet.</p>
+                    <div class="event-image">
+                        <img src="./image/Laptop-Pencils.jpg"/>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="event event2">
+                <div class="event-content">
+                    <i class="icon fas fa-theater-masks"></i>
+                    <div class="icon-details">
+                        <p class="bold">Listopad</p>
+                        <p>2019</p>
+                    </div>
+                    <p class="event-content1">Lorem ipsum dolor sit.</p>
+                    <p class="event-content2">Lorem ipsum dolor sit amet.</p>
+                    <div class="event-image">
+                        <img src="./image/People.jpg"/>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="event event1">
+                <div class="event-content">
+                    <i class="icon fas fa-pen-alt"></i>
+                    <div class="icon-details">
+                        <p class="bold">Listopad</p>
+                        <p>2020</p>
+                    </div>
+                    <p class="event-content1">Lorem ipsum dolor sit.</p>
+                    <p class="event-content2">Lorem ipsum dolor sit amet.</p>
+                    <div class="event-image">
+                        <img src="./image/Laptop-Pencils.jpg"/>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </section>
     </div>
 </body>
 </html>

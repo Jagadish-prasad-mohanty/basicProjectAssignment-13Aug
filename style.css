@@ -3,16 +3,29 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: rgb(252, 216, 222);
 }
 /* Navbar  */
-.navbar{
-    background: url('./image/hero-banner.jpg') rgb(255,69,0);
+.nav{
+    
+    background: url('./image/hero-banner.jpg') ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-blend-mode: multiply;
+    z-index: 1;
+}
+.navbar{
+    background-color: rgba(255, 72, 16, 0.699);
+    z-index: 10;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-blend-mode: multiply; */
     color:white;
     /* background-color: orange; */
     display: flex;
@@ -22,22 +35,27 @@ body{
     gap: 2rem;
 }
 .navbar-heading{
-    padding: 0.3px 1rem;
+    padding: 0.3rem 1rem;
+    border-radius: 0.1rem;
     font-size: 1.5rem;
     background-color: white;
-    color: rgb(250, 121, 62);
+    color: rgb(247, 89, 16);
+    z-index: 100;
 }
 .navbar-desc{
     font-weight: 100;
     font-size: 1rem;
+    z-index: 100;
 }
 .navbar-image{
     width: 55%;
-    height: 50vh;
+    height: 50%;
+    z-index: 100;
 }
 .navbar-image img{
     width: 100%;
     height: 100%;
+    z-index: 100;
 }
 .navbar-content{
     margin-top: 2.5rem;
@@ -47,6 +65,7 @@ body{
     align-items: center;    
     gap: 0.5rem;
     flex-flow: column;
+    z-index: 100;
     /* border: 1px solid pink; */
 }
 .navbar-buttons{
@@ -54,6 +73,7 @@ body{
     width: 100%;
     justify-content: space-around;
     align-items: center;
+    z-index: 100;;
 
 }
 .navbar-button{
@@ -61,11 +81,13 @@ body{
     border: 1px solid white;
     border-radius: 0.5rem;
     cursor: pointer;
+    z-index: inherit;
 }
+
 .navbar-button:hover{
     border: 1px solid rgb(250, 121, 62);
     background-color: white;
-    color: rgb(250, 121, 62);
+    color: rgb(247, 89, 16);
 }
 
 /* cards */
@@ -176,9 +198,10 @@ body{
     flex-flow: column;
     gap: 0.5rem;
     padding: 1rem;
+    border-bottom: 1px solid #ccc;
 }
 .stats-heading{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color:#ff3399
 }
 .stats-heading span{
@@ -197,19 +220,19 @@ body{
 .poop{
     background: linear-gradient(to right, #ff3399 0%, #ff9933 100%);
     padding: 0.2rem;
-    border-radius: 3.2rem;
+    border-radius: 2.7rem;
     cursor: pointer;
     transition: transform .3s ease-in;
 }
 .pop{
     background-color: white;
     color: black;
-    width: 12rem;
-    height: 6.5rem;
+    width: 10rem;
+    height: 6rem;
     text-align: center;
     padding: 1rem;
     position: relative;
-    border-radius: 3rem;
+    border-radius: 2.5rem;
     border: 3px solid #ccc;
     transition: transform .3s ease-in;
 }
@@ -233,4 +256,194 @@ body{
     padding: 0.5rem;
     border-radius: 10rem;
     background-color: rgb(255, 115, 0);
+}
+
+/* feature */
+.features{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-flow: column;
+    padding: 0.5rem;
+}
+.features-heading{
+    font-size: 1.8rem;
+    color: #ff9933;
+    margin-bottom: 2rem;
+}
+.features-content{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.features-img{
+    width: 45%;
+    
+}
+.features-details{
+    display: flex;
+    align-items: left;
+    gap: 0.5rem;
+    flex-flow: column;
+}
+.features-details1{
+    font-size: 1.2rem;
+}
+.features-details2{
+    box-shadow: 0 4px 6px 1px rgb(255, 115, 0);
+    border-top: 2px solid rgb(255, 115, 0);
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+#features-details22{
+    text-align: left;
+}
+
+#features-details21{
+    color: #ff870f;
+    text-align: center;
+}
+
+.features-details31{
+    background-image: linear-gradient(to right ,rgb(255, 72, 0), rgb(255, 153, 0));
+    font-size: 0.8rem;
+    color: white;
+    padding: 0.4rem;
+    margin: 0.4rem 0;
+}
+
+/* event calender */
+.calender{
+    background-color: rgb(225, 226, 226);
+    max-width: 1080px;
+    padding:  20px;
+    position: relative;
+}
+.calender .calender-heading{
+    color: #ff870f;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.calender .center-line{
+    height: 88%;
+    width: 4px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    transform: translateX(-50%);
+}
+.calender .event{
+    display: flex;
+    /* width: calc(50%-10px); */
+    /* position: relative; */
+}
+
+.calender .event1{
+    justify-content : flex-start;
+}
+.calender .event2{
+    justify-content : flex-end;
+}
+
+.event .event-content{
+    width: 42%;
+    background-color: white;
+    border-radius: 0.2rem;
+    padding: 20px;
+    display: flex;
+    align-items: left;
+    gap: 0.5rem;
+    flex-flow: column;
+    position: relative;
+
+}
+
+.event .event-content::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 18px;
+    transform: rotate(45deg);
+    background-color: white;
+    top: 20px;
+    /* z-index: -1; */
+}
+.event1 .event-content::before{
+    right: -10px;
+}
+.event2 .event-content::before{
+    left: -10px;
+}
+.event-content .icon,
+.center-line .scroll-icon{
+    background-color: red;
+    color: white;
+    position: absolute;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 17px;
+    /* border: 2px solid white; */
+    box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), inset 0 3px 0 4px rgba(0,0,0,0.05);
+}
+.event-content .icon-details{
+    color: black;
+    position: absolute;
+    /* width:40px;
+    height: 40px; */
+    /* text-align: center; */
+    font-size: 10px;
+}
+.event1 .event-content .icon-details{
+    top: 22px;
+    right: -150px;
+}
+.event2 .event-content .icon-details{
+    top: 22px;
+    left: -150px;
+}
+.bold{
+    font-weight: bold;
+}
+.center-line .scroll-icon{
+    bottom: 0px;
+    left: 50%;
+    font-size: 25px;
+    transform: translateX(-50%);
+}
+.event1 .event-content .icon{
+    background-color: blue;
+    top: 15px;
+    right: -102px;
+}
+.event2 .event-content .icon{
+    top: 12px;
+    left: -102px
+}
+.event-content1{
+    font-size: .9rem;
+}
+.event-content2{
+    font-size: .8rem;
+    border-left: 0.3rem solid rgb(230, 228, 228);
+    padding: 0.2rem 0.8rem;
+}
+.event-image{
+    width: 90%;
+}
+.event-image img{
+    width: 100%;
+}
+
+/* media query */
+@media (max-width :991px){
+    .feed2{
+        display: none;
+    }
 }
