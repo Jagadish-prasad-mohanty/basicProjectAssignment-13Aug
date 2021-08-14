@@ -60,6 +60,12 @@ body{
     padding:  0.3rem 3rem;
     border: 1px solid white;
     border-radius: 0.5rem;
+    cursor: pointer;
+}
+.navbar-button:hover{
+    border: 1px solid rgb(250, 121, 62);
+    background-color: white;
+    color: rgb(250, 121, 62);
 }
 
 /* cards */
@@ -81,6 +87,11 @@ body{
     padding: 1rem;
     position: relative;
     box-shadow: 1px 4px 3px rgb(250, 121, 62);
+    cursor: pointer;
+    transition: transform .3s ease-in;
+}
+.card:hover{
+    transform: scale(1.1);
 }
 .card h3{
     font-size: 1rem;
@@ -187,6 +198,8 @@ body{
     background: linear-gradient(to right, #ff3399 0%, #ff9933 100%);
     padding: 0.2rem;
     border-radius: 3.2rem;
+    cursor: pointer;
+    transition: transform .3s ease-in;
 }
 .pop{
     background-color: white;
@@ -197,7 +210,12 @@ body{
     padding: 1rem;
     position: relative;
     border-radius: 3rem;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
+    transition: transform .3s ease-in;
+}
+.poop:hover{
+    box-shadow: 3px 7px 8px #333;
+    transform: scale(1.05);
 }
 .pop h3{
     font-size: 2rem;
