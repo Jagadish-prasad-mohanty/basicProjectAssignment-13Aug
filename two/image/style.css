@@ -1,0 +1,44 @@
+:root,*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgba(221, 216, 217, 0.973);
+}
+/* Navbar */
+.navbar-brand{
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row; */
+    /* width: 8rem; */
+}
+.navbar-brand .brand-header{
+    font-weight:500;
+    font-size: 2rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+.fa-search{
+    background-color: orangered;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 50%;
+    /* margin-right: ; */
+}
+.navbar-btn{
+    background-color: orangered !important;
+    padding: 0.4rem !important;
+    border-radius: 5rem !important;
+    border: none !important;
+    color: white;
+    font-weight: 500 !important;
+    width: 7.5rem;
+}
+.navbar-btn i{
+    margin-right: 0.5rem;
+}
