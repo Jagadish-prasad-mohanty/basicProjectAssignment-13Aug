@@ -1,29 +1,24 @@
-const quizDB=[
-    {
-        question:"Q1: What is the fullform of HTML?",
-        a: "Hello To My Land",
-        b: "Hey Text Markup Language",
-        c: "Hyper Text Markup Langiage",
-        d: "Hyper Text Markup Language",
-        ans: "opt4"
-    },
-    {
-        question: "Q2: What is the fullform of CSS?",
-        a: "Cascading Style Sheets",
-        b: "Cascading Style Sheep",
-        c: "Cartoon Style Sheet",
-        d: "Cascading Super Sheets",
-        ans: "opt1" 
-    },
-    {
-        question: "Q3: What is the fullform of HTTP?",
-        a: "Hyper Text Transfer Product",
-        b: "Hyper Text Protocol",
-        c: "Hey Trasfer Protocol",
-        d: "Hyper Text Transfer Protocol",
-        ans: "opt4" 
-    }
-]
+
+const quizDB=[]
+const ques=[]
+for (let i=1;i<=localStorage.length;i++){
+    ques.push(JSON.parse(localStorage.getItem(i)));
+    // console.log(JSON.parse(localStorage.getItem(i)));
+}
+console.log(ques);
+ques.forEach(element=>{
+    const temp={
+        question:element.que,
+        a:element.opt1,
+        b:element.opt2,
+        c:element.opt3,
+        d:element.opt4,
+        ans:element.ans
+    };
+    quizDB.push(temp)
+    
+})
+console.log(quizDB)
 // let obj={
 //     name:'rama',
 //     age:12

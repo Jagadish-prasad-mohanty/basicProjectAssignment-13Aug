@@ -20,57 +20,42 @@
                     <th>Answer</th>
                     
                 </thead>
-                <tbody>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                </tbody>
-                <tbody>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                </tbody>
-                <tbody>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                </tbody>
-                <tbody>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                </tbody>
-                <tbody>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                </tbody>
-                <tbody>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                    <td>Lorem, ipsum dolor.</td>
-                </tbody>
+                <tbody id="table-body">
+                    <!-- Dynamic content goes here -->
+                  </tbody>
                 
-            </table>
+                </table>
+                <button><a href="./index.html" class="next btn">=></a></button>
         </div>
     </div>
+    <script>
+        const renderTableRows = (addQue,addOpt1, addOpt2,addOpt3,addOpt4, ans) => {
+          const tableDiv = document.getElementById('table-body');
+          const content = `<tr>
+            <td>${addQue}</td>
+            <td>${addOpt1}</td>
+            <td>${addOpt2}</td>
+            <td>${addOpt3}</td>
+            <td>${addOpt4}</td>
+            <td>${ans}</td>
+          </tr>`;
+        
+          tableDiv.innerHTML += content; 
+        }
+        const ques=[]
+        for (let i=1;i<=localStorage.length;i++){
+            ques.push(JSON.parse(localStorage.getItem(i)));
+            // console.log(JSON.parse(localStorage.getItem(i)));
+        }
+        console.log(ques);
+        ques.forEach(element=>{
+            renderTableRows(element.que,element.opt1,element.opt2,element.opt3,element.opt4,element.ans);
+        })
+
+
+
+
+        
+    </script>
 </body>
 </html>

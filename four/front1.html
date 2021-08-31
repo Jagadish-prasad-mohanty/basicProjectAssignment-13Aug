@@ -9,12 +9,12 @@
 </head>
 <body>
     <div class="main-div">
-        <form class="inner-div">
+        <div  class="inner-div">
             <div class="input">
                 <div class="label">
-                    <label>Enter your question:</label>
+                    <label  for="addque">Enter your question:</label>
                 </div>
-                <input/>
+                <input name="addque" class="addque" id="addque"/>
             </div>
 
             <div class="input">
@@ -49,8 +49,41 @@
             </div>
             
             
-            <button id="submit">Submit</button>
-        </form>
+            <button onclick="onQuestionAddHandler()" id="submit">Submit</button>
+            <button class="next btn"><a href="./front2.html">=></a></button>
+        </div>
     </div>
+    <script type="text/javascript">
+    var c=1;
+        function onQuestionAddHandler() {  
+
+            const addQue=document.getElementById("addque").value;
+            const addOpt1=document.getElementById("addopt1").value;
+            const addOpt2=document.getElementById("addopt2").value;
+            const addOpt3=document.getElementById("addopt3").value;
+            const addOpt4=document.getElementById("addopt4").value;
+            const ans=document.getElementById("ans").value;
+            console.log(addQue,addOpt1,ans);
+            let obj={
+                que:addQue,
+                opt1:addOpt1,
+                opt2:addOpt2,
+                opt3:addOpt3,
+                opt4:addOpt4,
+                ans:ans
+            }
+            addQue.value='';
+            addOpt1.value='';
+            addOpt2.value='';
+            addOpt3.value='';
+            addOpt4.value='';
+            ans.value='';
+            let obj_s=JSON.stringify(obj)
+            localStorage.setItem(c++,obj_s)
+            console.log(JSON.parse(localStorage.getItem(1)));
+            
+            
+        }
+    </script>
 </body>
 </html>
