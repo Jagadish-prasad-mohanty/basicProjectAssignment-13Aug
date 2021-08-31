@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+/* font-family: 'Roboto Slab', serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Roboto Slab', serif; */
+    font-family: 'Courgette', cursive;
+    font-weight: 500;
+
+}
+html{
+    font-size: 62.5%;
+}
+.main-div{
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: hsla(0, 49%, 25%, 0.603);
+}
+.inner-div{
+    width: 45vw;
+    background-color:#fff;
+    padding: 2.2rem 6rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0,0, 0.5);
+}
+.inner-div h2{
+    font-size: 22px;
+    margin-bottom: 2rem;
+}
+
+.inner-div ul li{
+    list-style: none;
+    font-size: 15px;
+}
+input{
+    cursor: pointer;
+}
+#submit,.btn{
+    display: block;
+    margin:auto;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgb(243, 177, 35);
+    box-shadow: 0 0.6rem 0.6rem -0.1rem rgba(0,0, 0,.4);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.btn{
+    background-color: rgb(174, 46, 189);
+}
+
+#submit:hover{
+    background: rgb(209, 146, 28);
+}
+.btn:hover{
+    background-color: rgb(128, 37, 138)
+}
+#myScore{
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(141, 42, 42);
+}
+#showScore{
+    min-height: 4rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: rgb(201, 198, 198);
+    box-shadow: 0 1rem 1rem -0.7rem rgba(59, 36, 36, 0.5);
+}
+.scoreA{
+    display: none;
+}
+
+
+/* page2 */
+.input{
+    list-style: none;
+    font-size: 15px;
+    margin-bottom: .6rem;
+}
+
+.input .label{
+    display: inline-block;
+    width: 14rem;
+    
+    /* border: 1px solid red; */
+}
+
+.input label{
+    cursor: pointer; 
+}
+.input .addopt{
+    cursor: text;
+}
+
+
+/* //page2 */
+.main-div2{
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 49%, 25%, 0.603);
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+.inner-div2{
+    width: 80vw;
+    background-color:#fff;
+    padding: 2.2rem 6rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0,0, 0.5);
+}
+.inner-div2 thead{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+.inner-div2 tbody{
+    font-size: 1.3rem;
+}
+tbody td{
+    text-align: left;
+}
