@@ -70,6 +70,12 @@ input{
     text-align: center;
     color: rgb(141, 42, 42);
 }
+
+.text_para{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: teal;
+}
 #showScore{
     min-height: 4rem;
     width: 100%;

@@ -46,6 +46,7 @@
                     <label for="ans">Answer : </label>
                 </div>
                 <input name="addopt" class="addopt" id="ans"/>
+                <div><p class="text_para">if Option2 is correct put "opt2" <br> as value and so on</p></div>
             </div>
             
             
@@ -57,20 +58,20 @@
     var c=1;
         function onQuestionAddHandler() {  
 
-            const addQue=document.getElementById("addque").value;
-            const addOpt1=document.getElementById("addopt1").value;
-            const addOpt2=document.getElementById("addopt2").value;
-            const addOpt3=document.getElementById("addopt3").value;
-            const addOpt4=document.getElementById("addopt4").value;
-            const ans=document.getElementById("ans").value;
+            const addQue=document.getElementById("addque");
+            const addOpt1=document.getElementById("addopt1");
+            const addOpt2=document.getElementById("addopt2");
+            const addOpt3=document.getElementById("addopt3");
+            const addOpt4=document.getElementById("addopt4");
+            const ans=document.getElementById("ans");
             console.log(addQue,addOpt1,ans);
             let obj={
-                que:addQue,
-                opt1:addOpt1,
-                opt2:addOpt2,
-                opt3:addOpt3,
-                opt4:addOpt4,
-                ans:ans
+                que:addQue.value,
+                opt1:addOpt1.value,
+                opt2:addOpt2.value,
+                opt3:addOpt3.value,
+                opt4:addOpt4.value,
+                ans:ans.value
             }
             addQue.value='';
             addOpt1.value='';
