@@ -55,7 +55,7 @@
         </div>
     </div>
     <script type="text/javascript">
-    var c=1;
+    
         function onQuestionAddHandler() {  
 
             const addQue=document.getElementById("addque");
@@ -79,8 +79,10 @@
             addOpt3.value='';
             addOpt4.value='';
             ans.value='';
+            let c=localStorage.length+1;
+            console.log(c);
             let obj_s=JSON.stringify(obj)
-            localStorage.setItem(c++,obj_s)
+            localStorage.setItem(c,obj_s)
             console.log(JSON.parse(localStorage.getItem(1)));
             
             
