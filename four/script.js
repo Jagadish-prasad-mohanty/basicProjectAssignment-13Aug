@@ -104,6 +104,7 @@ submit.addEventListener('click', () =>{
         addElement();
     }
     else{
+        submit.style.display='none'
         showScore.innerHTML=`
             <div id="myScore">You Scored: ${score}/${quizDB.length}</div>
             <button class="btn" onclick="location.reload()">START</button>
